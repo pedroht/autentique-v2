@@ -15,7 +15,7 @@ const moveToFolder = async (
       __dirname,
       '..',
       'resources',
-      'folders',
+      'documents',
       currentFolderId ? 'moveToFolderByFolder.graphql' : 'moveToFolder.graphql',
     );
     const operations = fs

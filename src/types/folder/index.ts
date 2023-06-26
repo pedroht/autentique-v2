@@ -24,7 +24,9 @@ export type DeleteFolderParams = {
 };
 
 export type DeleteFolderResult = {
-  data: {};
+  data: {
+    deleteFolder: boolean;
+  };
 };
 
 export type ListAllFoldersParams = {

@@ -1,5 +1,5 @@
 "query {
-  folders(limit: 60, page: 1) {
+  folders(limit: 60, page: $page) {
     total
     data {
       id
@@ -8,5 +8,4 @@
       created_at
     }
   }
-}",
-"variables": $variables
+}"
