@@ -7,10 +7,6 @@
     "strict": true,
     "skipLibCheck": true,
     "declaration": true,
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["./src/*"]
-    },
     "outDir": "lib",
     "rootDir": "src",
     "types": ["node"],
