@@ -1,13 +1,13 @@
 import fs from 'node:fs';
 import path from 'node:path';
 
+import Api from '../common/Api';
+import utils from '../common/utils';
+import { ApiConfigType } from '../types';
 import {
   ListDocumentByIdParams,
   ListDocumentByIdResult,
-} from '@/types/document';
-import Api from '@/common/Api';
-import utils from '@/common/utils';
-import { ApiConfigType } from '@/types';
+} from '../types/document';
 
 const listById = async (
   { token, sandbox = false }: ApiConfigType,

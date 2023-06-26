@@ -1,10 +1,10 @@
 import fs from 'node:fs';
 import path from 'node:path';
 
-import { DeleteFolderParams, DeleteFolderResult } from '@/types/folder';
-import Api from '@/common/Api';
-import utils from '@/common/utils';
-import { ApiConfigType } from '@/types';
+import Api from '../common/Api';
+import utils from '../common/utils';
+import { ApiConfigType } from '../types';
+import { DeleteFolderParams, DeleteFolderResult } from '../types/folder';
 
 const deleteById = async (
   { token, sandbox = false }: ApiConfigType,

@@ -1,10 +1,10 @@
 import fs from 'node:fs';
 import path from 'node:path';
 
-import { CreateFolderParams, CreateFolderResult } from '@/types/folder';
-import Api from '@/common/Api';
-import utils from '@/common/utils';
-import { ApiConfigType } from '@/types';
+import Api from '../common/Api';
+import utils from '../common/utils';
+import { ApiConfigType } from '../types';
+import { CreateFolderParams, CreateFolderResult } from '../types/folder';
 
 const create = async (
   { token, sandbox = false }: ApiConfigType,

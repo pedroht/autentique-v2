@@ -1,10 +1,10 @@
 import fs from 'node:fs';
 import path from 'node:path';
 
-import { DeleteDocumentParams, DeleteDocumentResult } from '@/types/document';
-import Api from '@/common/Api';
-import utils from '@/common/utils';
-import { ApiConfigType } from '@/types';
+import Api from '../common/Api';
+import utils from '../common/utils';
+import { ApiConfigType } from '../types';
+import { DeleteDocumentParams, DeleteDocumentResult } from '../types/document';
 
 const deleteById = async (
   { token, sandbox = false }: ApiConfigType,

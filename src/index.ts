@@ -1,5 +1,5 @@
-import document from '@/document';
-import folder from '@/folder';
+import document from './document';
+import folder from './folder';
 
 class Instance {
   document: ReturnType<typeof document>;

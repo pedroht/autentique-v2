@@ -1,3 +1,4 @@
+import { ApiConfigType } from '../types';
 import {
   CreateDocumentParams,
   DeleteDocumentParams,
@@ -5,9 +6,7 @@ import {
   ListDocumentByIdParams,
   MoveDocumentParams,
   SignDocumentParams,
-} from '@/types/document';
-import { ApiConfigType } from '@/types';
-
+} from '../types/document';
 import { create } from './create';
 import { deleteById } from './deleteById';
 import { listAll } from './listAll';

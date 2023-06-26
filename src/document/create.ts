@@ -3,10 +3,10 @@ import path from 'node:path';
 import axios from 'axios';
 import FormData from 'form-data';
 
-import { CreateDocumentParams, CreateDocumentResult } from '@/types/document';
-import Api from '@/common/Api';
-import utils from '@/common/utils';
-import { ApiConfigType } from '@/types';
+import Api from '../common/Api';
+import utils from '../common/utils';
+import { ApiConfigType } from '../types';
+import { CreateDocumentParams, CreateDocumentResult } from '../types/document';
 
 const create = async (
   { token, sandbox = false }: ApiConfigType,
@@ -36,7 +36,6 @@ const create = async (
     const buffer = await axios.get(file as string, {
       responseType: 'arraybuffer',
     });
-    const newFile = Buffer.from(buffer.data);
 
     const formData = new FormData();
     formData.append('operations', utils.query(operations));

@@ -1,12 +1,11 @@
+import { ApiConfigType } from '../types';
 import {
   CreateFolderParams,
   DeleteFolderParams,
   ListAllFoldersParams,
   ListDocumentsByFolderParams,
   ListFolderByIdParams,
-} from '@/types/folder';
-import { ApiConfigType } from '@/types';
-
+} from '../types/folder';
 import { create } from './create';
 import { deleteById } from './deleteById';
 import { listAll } from './listAll';
