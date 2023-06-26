@@ -8,7 +8,9 @@ type FolderType = {
 };
 
 export type CreateFolderParams = {
-  name: string;
+  folder: {
+    name: string;
+  };
 };
 
 export type CreateFolderResult = {
@@ -26,7 +28,7 @@ export type DeleteFolderResult = {
 };
 
 export type ListAllFoldersParams = {
-  page: number;
+  page?: number;
 };
 
 export type ListAllFoldersResult = {

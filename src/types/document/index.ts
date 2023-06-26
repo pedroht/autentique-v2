@@ -82,7 +82,7 @@ export type DeleteDocumentResult = {
 };
 
 export type ListAllDocumentsParams = {
-  page: number;
+  page?: number;
 };
 
 export type ListAllDocumentsResult = {

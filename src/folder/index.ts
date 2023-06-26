@@ -1,11 +1,5 @@
 import { ApiConfigType } from '../types';
-import {
-  CreateFolderParams,
-  DeleteFolderParams,
-  ListAllFoldersParams,
-  ListDocumentsByFolderParams,
-  ListFolderByIdParams,
-} from '../types/folder';
+import { CreateFolderParams } from '../types/folder';
 import { create } from './create';
 import { deleteById } from './deleteById';
 import { listAll } from './listAll';
@@ -14,11 +8,13 @@ import { listDocuments } from './listDocuments';
 
 const folder = (def: ApiConfigType) => ({
   create: (args: CreateFolderParams) => create(def, args),
-  listAll: (args: ListAllFoldersParams) => listAll(def, args),
-  listById: (args: ListFolderByIdParams) => listById(def, args),
-  listDocuments: (args: ListDocumentsByFolderParams) =>
-    listDocuments(def, args),
-  deleteById: (args: DeleteFolderParams) => deleteById(def, args),
+  listAll: (page?: number) => listAll(def, { page }),
+  listById: (folderId: string) => listById(def, { folderId }),
+  listDocuments: (folderId: string) => listDocuments(def, { folderId }),
+  deleteById: (folderId: string) =>
+    deleteById(def, {
+      folderId,
+    }),
 });
 
 export default folder;

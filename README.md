@@ -36,13 +36,13 @@ autentique.token = AUTENTIQUE_TOKEN;
 #### 1 - List all documents with pagination
 
 ```js script
-autentique.document.listAll({ page }); // if not isset page is equal 1
+autentique.document.listAll(page); // if not isset page is equal 1
 ```
 
 #### 2 - List the document by id
 
 ```js script
-autentique.document.listById({ documentId });
+autentique.document.listById(documentId);
 ```
 
 #### 3 - Create a document
@@ -83,13 +83,13 @@ autentique.document.create(attributes);
 ### 4 - Sign the document by id
 
 ```js script
-autentique.document.signById({ documentId });
+autentique.document.signById(documentId);
 ```
 
 #### 5 - Delete the document by id
 
 ```js script
-autentique.document.deleteById({ documentId });
+autentique.document.deleteById(documentId);
 ```
 
 #### 6 - Move the document to a folder
@@ -118,31 +118,33 @@ autentique.document.moveToFolder({
 #### 1 - List all folders
 
 ```js script
-autentique.folder.listAll({ page }); // if not isset page is equal 1
+autentique.folder.listAll(page); // if not isset page is equal 1
 ```
 
 #### 2 - List the folder by id
 
 ```js script
-autentique.folder.listById({ folderId });
+autentique.folder.listById(folderId);
 ```
 
 #### 3 - Create a folder
 
 ```js script
-autentique.folder.create({ name });
+autentique.folder.create({
+  folder: {
+    name: 'FOLDER NAME',
+  },
+});
 ```
 
 #### 4 - List the folder contents by id
 
-js script
-
-```
-autentique.folder.listDocuments({ folderId })
+```js script
+autentique.folder.listDocuments(folderId);
 ```
 
 #### 5 - Delete a folder
 
 ```js script
-autentique.folder.deleteById({ folderId });
+autentique.folder.deleteById(folderId);
 ```

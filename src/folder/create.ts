@@ -8,11 +8,11 @@ import { CreateFolderParams, CreateFolderResult } from '../types/folder';
 
 const create = async (
   { token, sandbox = false }: ApiConfigType,
-  { name }: CreateFolderParams,
+  { folder }: CreateFolderParams,
 ): Promise<CreateFolderResult | undefined> => {
   try {
     const variables = {
-      name,
+      folder,
     };
 
     const filename = path.resolve(
