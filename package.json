@@ -1,6 +1,6 @@
 {
   "name": "autentique-v2",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Integração nodejs com a ferramenta autentique de assinatura digital de documentos",
   "main": "./lib/index.js",
   "scripts": {
