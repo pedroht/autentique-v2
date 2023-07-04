@@ -99,7 +99,9 @@ export type ListDocumentByIdParams = {
 };
 
 export type ListDocumentByIdResult = {
-  data: DocumentType;
+  data: {
+    document: DocumentType;
+  };
 };
 
 export type SignDocumentParams = {
