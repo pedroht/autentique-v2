@@ -54,7 +54,9 @@ export type CreateDocumentParams = {
     name: string;
   };
   signers: {
-    email: string;
+    phone?: string;
+    email?: string;
+    delivery_method?: "DELIVERY_METHOD_WHATSAPP" | "DELIVERY_METHOD_SMS",
     action: 'SIGN';
     positions?: {
       x: string;
